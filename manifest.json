@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "TUF Setting+",
+  "version": "1.0",
+  "description": "The Universal Forums에 편의 기능과 커스텀 설정을 추가합니다.",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png",
+    "default_title": "TUF Setting+"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://tuforums.com/*",
+        "https://*.tuforums.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}

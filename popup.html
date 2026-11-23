@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>TUF Setting+</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h3>TUF Setting+</h3>
+
+  <!-- 1. 이미지 -->
+  <div>
+    <h4>이미지</h4>
+
+    <label>
+      <input type="checkbox" id="toggle-mascot">
+      <span>마스코트 바꾸기</span>
+    </label>
+    <div><small>제출 랜딩 페이지의 캐릭터 아트를 바꿉니다.</small></div>
+
+    <label>
+      <input type="checkbox" id="toggle-decor">
+      <span>마스코트 주변 장식 숨기기</span>
+    </label>
+    <div><small>캐릭터 뒤/주변의 타일, 별, 카메라 오브젝트를 숨깁니다.</small></div>
+
+    <!-- 엘리 -->
+    <div class="box">
+      <div><strong>엘리 (플레이 제출)</strong></div>
+      <div class="row">
+        <div class="preview-wrap">
+          <img id="preview-ellie" src="https://tuforums.com/assets/ellie.BXM0XSha.png" alt="엘리">
+          <div id="cover-ellie" class="cover">미리보기를 보려면 👁️를 클릭하세요</div>
+        </div>
+        <div class="info">
+          <div id="name-ellie">기본 이미지</div>
+          <div class="btns">
+            <button type="button" id="eye-ellie" title="미리보기 보기/숨기기">👁️</button>
+            <button type="button" id="reset-ellie" title="초기화">↩</button>
+            <button type="button" id="upload-ellie" title="이미지 선택">📁</button>
+            <input type="file" id="file-ellie" accept="image/*" hidden>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 아멜리아 -->
+    <div class="box">
+      <div><strong>아멜리아 (레벨 제출)</strong></div>
+      <div class="row">
+        <div class="preview-wrap">
+          <img id="preview-amelia" src="https://tuforums.com/assets/amelia.DCMtvIku.png" alt="아멜리아">
+          <div id="cover-amelia" class="cover">미리보기를 보려면 👁️를 클릭하세요</div>
+        </div>
+        <div class="info">
+          <div id="name-amelia">기본 이미지</div>
+          <div class="btns">
+            <button type="button" id="eye-amelia" title="미리보기 보기/숨기기">👁️</button>
+            <button type="button" id="reset-amelia" title="초기화">↩</button>
+            <button type="button" id="upload-amelia" title="이미지 선택">📁</button>
+            <input type="file" id="file-amelia" accept="image/*" hidden>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- 2. 테마 -->
+  <div>
+    <h4>테마</h4>
+
+    <label>
+      <input type="checkbox" id="toggle-bg">
+      <span>커스텀 배경 적용</span>
+    </label>
+    <div><small>사이트 배경을 단색 또는 원하는 이미지로 변경합니다.</small></div>
+
+    <div class="box">
+      <div class="row">
+        <div class="preview-wrap bg-wrap">
+          <div id="preview-bg-box" class="bg-box">기본 배경</div>
+          <div id="cover-bg" class="cover">미리보기를 보려면 👁️를 클릭하세요</div>
+        </div>
+        <div class="info">
+          <div id="name-bg">기본 남보라 테마</div>
+          <div class="btns">
+            <button type="button" id="eye-bg" title="미리보기 보기/숨기기">👁️</button>
+            <button type="button" id="reset-bg" title="초기화">↩</button>
+            <button type="button" id="upload-bg" title="배경 이미지 선택">📁</button>
+            <input type="file" id="file-bg" accept="image/*" hidden>
+            <label class="color-btn" title="단색 배경 선택">
+              💧
+              <input type="color" id="color-bg" value="#0d0c18">
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- 3. 탐색 -->
+  <div>
+    <h4>탐색</h4>
+
+    <label>
+      <input type="checkbox" id="toggle-navbar">
+      <span>상단바 빠른 이동 추가</span>
+    </label>
+    <div><small>원하는 메뉴 이름과 주소를 최대 3개까지 추가합니다.</small></div>
+
+    <div id="shortcut-list"></div>
+    <button type="button" id="add-shortcut-btn">➕ 빠른 이동 추가 (<span id="shortcut-count">0</span>/3)</button>
+  </div>
+
+  <hr>
+
+  <!-- 하단 링크 -->
+  <div class="footer-btns">
+    <button type="button" id="btn-tuf-settings">TUF 환경설정 🔗</button>
+    <button type="button" id="btn-bug-report">버그 제보 🔗</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
