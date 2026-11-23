@@ -264,3 +264,7 @@ document.getElementById('btn-tuf-settings').addEventListener('click', () => {
 document.getElementById('btn-bug-report').addEventListener('click', () => {
   chrome.tabs.create({ url: 'https://forms.gle/aYFg5pS1dPnHYRLn6' });
 });
+
+document.getElementById('btn-github').addEventListener('click', () => {
+  chrome.tabs.create({ url: 'https://github.com/CleaN1401/TUF_Setting_Plus' });
+});
